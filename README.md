@@ -5,17 +5,17 @@
  <br /> 
  <br />
 <h3> :camera: <b>Screen Shots</b> </h3>
-
-![library1](https://github.com/sushmithaa20/Library-managment-rectjs/assets/68849782/e29df24a-01fc-43fd-9d0f-2f1c40ed836e)
+ 
+![library1](https://github.com/sushmithaa20/Library-managment-rectjs/assets/68849782/d5749a5b-31b0-4966-bd8d-ec4e1995c738)
 <hr><br /> 
-
-![library2](https://github.com/sushmithaa20/Library-managment-rectjs/assets/68849782/8ab166dd-948f-4cb8-8f41-ce57d906aad1)
+ 
+![library2](https://github.com/sushmithaa20/Library-managment-rectjs/assets/68849782/aa213236-ee5d-44b3-bfa0-deea1d223cf4)
 <hr><br /> 
-  
-![library3](https://github.com/sushmithaa20/Library-managment-rectjs/assets/68849782/61aa5086-3ad4-4f1a-a298-01cb321091b9)
+ 
+![library3](https://github.com/sushmithaa20/Library-managment-rectjs/assets/68849782/34a38b5a-9452-42fd-a23a-ca25bfd4e022)
 <hr><br /> 
-  
-![library4](https://github.com/sushmithaa20/Library-managment-rectjs/assets/68849782/5e84fe67-b25f-478f-a4b3-b66d43308647)
+ 
+![library4](https://github.com/sushmithaa20/Library-managment-rectjs/assets/68849782/949a17fd-ca25-4911-9539-b7def5aeaaa8)
 <hr><br /> 
 
 
