@@ -2,14 +2,13 @@
 import ReactPaginate from "react-paginate";
 import { useEffect, useState } from "react";
 import axios from 'axios';
-import bookimg from "../images/book1.jpg";
 import "./home.css";
 import { MDBPagination, MDBPaginationItem, MDBPaginationLink, MDBBtn, MDBCotainer } from 'mdb-react-ui-kit'
 
 function App() {
     const [items, setItems] = useState([]);
     const [values, setValues] = useState([]);
-    const [sortValues, setSortValues] = useState([]);
+    const [sortValues, setSortValues] = useState("");
     const [sortFilterValues, setSortFilterValues] = useState("");
     const [operation, setOperation] = useState("");
 
@@ -24,56 +23,50 @@ function App() {
         loadBooksData(0, limit, 0);
     }, []);
 
-    const loadBooksData = async (start, end, increase,opType=null,SearchByValue) => {
+    const loadBooksData = async (start, end, increase, opType = null, SearchByValue) => {
 
 
-        switch(opType){
+        switch (opType) {
             case "search":
                 setOperation(opType);
                 setValues("");
                 return await axios.get(`http://localhost:3004/books?q=${values}&_start=${start}&_end=${end}`)
-                .then((response) => {
-                    setItems(response.data);
-                    setCurrentpage(currentPage + increase);
-                })
-                .catch((err) => console.log(err));
-            
+                    .then((response) => {
+                        setItems(response.data);
+                        setCurrentpage(currentPage + increase);
+                    })
+                    .catch((err) => console.log(err));
+
             case "searchBy":
                 setOperation(opType);
                 setSortFilterValues(sortFilterValues);
-                return await axios.get(`http://localhost:3004/books?_sort=${SearchByValue}$_order=asc&_start=${start}&_end=${end}`)
-                .then((response) => {
-                    setItems(response.data);
-                    setCurrentpage(currentPage + increase);
-                })
-                .catch((err) => console.log(err));
-            
+                return await axios.get(`http://localhost:3004/books?_sort=${SearchByValue}&_order=asc&_start=${start}&_end=${end}`)
+                    .then((response) => {
+                        setItems(response.data);
+                        setCurrentpage(currentPage + increase);
+                    })
+                    .catch((err) => console.log(err));
+
             default:
-                 return await axios.get(`http://localhost:3004/books?_start=${start}&_end=${end}`)
-            .then((response) => {
-                setItems(response.data);
-                setCurrentpage(currentPage + increase);
-            })
-            .catch((err) => console.log(err));
-            
+                return await axios.get(`http://localhost:3004/books?_start=${start}&_end=${end}`)
+                    .then((response) => {
+                        setItems(response.data);
+                        setCurrentpage(currentPage + increase);
+                    })
+                    .catch((err) => console.log(err));
+
         }
 
     };
 
     const handleSearch = async (e) => {
         e.preventDefault();
-        loadBooksData(0,limit,0,"search");
-        // return await axios.get(`http://localhost:3004/books?q=${values}`)
-        //     .then((response) => setItems(response.data)).catch((err) => console.log(err));
-        // setValues("");
     };
 
     const handleSearchBy = async (e) => {
         let value = e.target.value;
         setSortValues(value);
-        loadBooksData(0,limit,0,"searchBy",value);
-        // return await axios.get(`http://localhost:3004/books?_sort=${values}&_order=asc`)
-        //     .then((response) => setItems(response.data));
+        loadBooksData(0, limit, 0, "searchBy", value);
     };
 
     const handleReset = () => {
@@ -81,8 +74,7 @@ function App() {
     };
 
     const pagination = () => {
-        if(currentPage===0 && items.length<limit)
-        {
+        if (currentPage === 0 && items.length < limit) {
             return null;
         }
         else if (currentPage === 0) {
@@ -95,49 +87,49 @@ function App() {
                         </MDBPaginationLink>
                     </MDBPaginationItem>
                     <MDBPaginationItem>
-                    <MDBBtn onClick={() => loadBooksData(limit,limit*2, 1,operation,sortFilterValues)}>
-                        Next
-                    </MDBBtn>
+                        <MDBBtn onClick={() => loadBooksData(limit, limit * 2, 1, operation, sortFilterValues)}>
+                            Next
+                        </MDBBtn>
                     </MDBPaginationItem>
                 </MDBPagination>
             );
         }
-        else if (currentPage < limit - 1 && items.length===limit) {
-           return(
-            <MDBPagination className="mb-0">
-            <MDBPaginationItem>
-                <MDBBtn onClick={() => loadBooksData((currentPage-1)*limit , currentPage*limit, -1,operation,sortFilterValues)}>
-                    Prev
-                </MDBBtn>
-            </MDBPaginationItem>
-            <MDBPaginationItem>
-                <MDBPaginationLink>
-                    {currentPage + 1}
-                </MDBPaginationLink>
-            </MDBPaginationItem>
-            <MDBPaginationItem>
-                <MDBBtn onClick={() => loadBooksData((currentPage+1)*limit,(currentPage+2)*limit , 1,operation,sortFilterValues)}>
-                    Next
-                </MDBBtn>
-            </MDBPaginationItem>
-        </MDBPagination>
-           )
+        else if (currentPage < limit - 1 && items.length === limit) {
+            return (
+                <MDBPagination className="mb-0">
+                    <MDBPaginationItem>
+                        <MDBBtn onClick={() => loadBooksData((currentPage - 1) * limit, currentPage * limit, -1, operation, sortFilterValues)}>
+                            Prev
+                        </MDBBtn>
+                    </MDBPaginationItem>
+                    <MDBPaginationItem>
+                        <MDBPaginationLink>
+                            {currentPage + 1}
+                        </MDBPaginationLink>
+                    </MDBPaginationItem>
+                    <MDBPaginationItem>
+                        <MDBBtn onClick={() => loadBooksData((currentPage + 1) * limit, (currentPage + 2) * limit, 1, operation, sortFilterValues)}>
+                            Next
+                        </MDBBtn>
+                    </MDBPaginationItem>
+                </MDBPagination>
+            )
         }
         else {
-            return(
+            return (
                 <MDBPagination className="mb-0">
-                <MDBPaginationItem>
-                    <MDBBtn onClick={() => loadBooksData((currentPage-1)*limit , currentPage*limit, -1,operation,sortFilterValues)}>
-                        Prev
-                    </MDBBtn>
-                </MDBPaginationItem>
-                <MDBPaginationItem>
-                    <MDBPaginationLink>
-                        {currentPage + 1}
-                    </MDBPaginationLink>
-                </MDBPaginationItem>
+                    <MDBPaginationItem>
+                        <MDBBtn onClick={() => loadBooksData((currentPage - 1) * limit, currentPage * limit, -1, operation, sortFilterValues)}>
+                            Prev
+                        </MDBBtn>
+                    </MDBPaginationItem>
+                    <MDBPaginationItem>
+                        <MDBPaginationLink>
+                            {currentPage + 1}
+                        </MDBPaginationLink>
+                    </MDBPaginationItem>
 
-            </MDBPagination>
+                </MDBPagination>
             )
         }
     };
@@ -155,6 +147,7 @@ function App() {
                 <div>
                     <br />
                     <h5>Search by:</h5>
+                    <p>It will sort the books in asending order depending on the field selected</p>
                     <select onChange={handleSearchBy} value={sortValues} className="select">
                         <option>Please select the option</option>
                         {sortOptions.map((item, index) => (
@@ -164,6 +157,7 @@ function App() {
                 </div>
                 <br />
                 <h5>Book List:</h5>
+                <h6>Number of Books : {items.length}</h6>
                 {items.map((item) => {
                     return (
                         <div key={item.id} className="col-sm-6 col-md-4 v my-2">

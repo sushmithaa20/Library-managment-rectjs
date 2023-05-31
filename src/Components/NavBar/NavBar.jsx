@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './NavBar.css'; // Import the CSS file for styles
+import './NavBar.css'; 
 
 function NavBar() {
   const [activeTab, setActiveTab] = useState('Home');
@@ -12,7 +12,7 @@ function NavBar() {
     <nav>
       <ul className='navbar'>
         <li className={activeTab === 'Home' ? 'active' : ''} onClick={() => handleTabClick('Home')}>
-          <a href="#">Home</a>
+          <a href="#">Library Managment System</a>
         </li>
       </ul>
     </nav>

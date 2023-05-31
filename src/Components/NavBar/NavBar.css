@@ -3,11 +3,14 @@ nav ul {
     margin: 0;
     padding: 0;
     background-color:#1f1f38;
+    
   }
   
   nav li {
     display: inline-block;
     margin-right: 10px;
+    margin-left: 100px;
+    font-size: 30px;
   }
   
   nav li a {
@@ -16,10 +19,11 @@ nav ul {
     text-decoration: none;
     background-color: #f2f2f2;
     color:#1f1f38;
+   
   }
   
   nav li.active a {
     background-color:#1f1f38;
-    color: #fff;
+    color: #4db5ff;
   }
   
