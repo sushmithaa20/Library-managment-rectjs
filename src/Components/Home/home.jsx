@@ -30,7 +30,8 @@ function App() {
             case "search":
                 setOperation(opType);
                 setValues("");
-                return await axios.get(`http://localhost:3004/books?q=${values}&_start=${start}&_end=${end}`)
+                console.log(values);
+                return await axios.get(`https://books-data-0y74.onrender.com/books?q=${values}&_start=${start}&_end=${end}`)
                     .then((response) => {
                         setItems(response.data);
                         setCurrentpage(currentPage + increase);
@@ -40,7 +41,7 @@ function App() {
             case "searchBy":
                 setOperation(opType);
                 setSortFilterValues(sortFilterValues);
-                return await axios.get(`http://localhost:3004/books?_sort=${SearchByValue}&_order=asc&_start=${start}&_end=${end}`)
+                return await axios.get(`https://books-data-0y74.onrender.com/books?_sort=${SearchByValue}&_order=asc&_start=${start}&_end=${end}`)
                     .then((response) => {
                         setItems(response.data);
                         setCurrentpage(currentPage + increase);
@@ -48,7 +49,7 @@ function App() {
                     .catch((err) => console.log(err));
 
             default:
-                return await axios.get(`http://localhost:3004/books?_start=${start}&_end=${end}`)
+                return await axios.get(`https://books-data-0y74.onrender.com/books?_start=${start}&_end=${end}`)
                     .then((response) => {
                         setItems(response.data);
                         setCurrentpage(currentPage + increase);
@@ -61,6 +62,7 @@ function App() {
 
     const handleSearch = async (e) => {
         e.preventDefault();
+        loadBooksData(0,limit,0,"search")
     };
 
     const handleSearchBy = async (e) => {

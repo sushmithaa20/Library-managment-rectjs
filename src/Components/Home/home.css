@@ -57,15 +57,15 @@ h5 {
 }
 
 .input {
-    width: 300px;
+    width: 220px;
     height: 40px;
-    border-radius: 20px 0 0 20px;
+    border-radius: 15px 0 0 15px;
 }
 
 .search-btn {
-    width: 80px;
+    width: 60px;
     height: 40px;
-    border-radius: 0px 20px 20px 0px;
+    border-radius: 0px 15px 15px 0px;
     background-color: #4db5ff;
     border: solid black 1px;
 }
