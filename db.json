@@ -1,0 +1,140 @@
+
+{
+    "books": [
+        {
+            "postId": 1,
+            "id": 1,
+            "author": "J.K. Rowling",
+            "title": "Harry Potter and the Sorcerer's Stone",
+            "subject": "Fantasy",
+            "published_date": "1997-06-26",
+            "image": "http://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781608870394/harry-potter-9781608870394_hr.jpg"
+        },
+        {
+            "postId": 1,
+            "id": 2,
+            "author": "Aldous Huxley",
+            "title": "Brave New World",
+            "subject": "Dystopian Fiction",
+            "published_date": "1932-06-01",
+            "image":"https://getcovers.com/wp-content/uploads/2020/12/image49-954x1536.jpg"
+        },
+        {
+            "postId": 1,
+            "id": 3,
+            "author": "Harper Lee",
+            "title": "To Kill a Mockingbird",
+            "subject": "Classic Literature",
+            "published_date": "1960-07-11",
+            "image":"https://99designs-blog.imgix.net/wp-content/uploads/2017/07/attachment_73599840-e1500060411553.png?auto=format&q=60&fit=max&w=930"
+        },
+        {
+            "postId": 1,
+            "id": 4,
+            "author": "F. Scott Fitzgerald",
+            "title": "The Great Gatsby",
+            "subject": "Classic Literature",
+            "published_date": "1925-04-10",
+            "image":"https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/93387946729191.5865ba3589c38.png"
+        },
+        {
+            "postId": 1,
+            "id": 5,
+            "author": "Jane Austen",
+            "title": "Pride and Prejudice",
+            "subject": "Classic Literature",
+            "published_date": "1813-01-28",
+            "image":"https://www.goodnet.org/photos/620x0/28341_hd.jpg"
+        },
+        {
+            "postId": 2,
+            "id": 6,
+            "author": "J.R.R. Tolkien",
+            "title": "The Lord of the Rings",
+            "subject": "Fantasy",
+            "published_date": "1954-07-29",
+            "image":"https://teamjimmyjoe.com/wp-content/uploads/2012/12/Bad-Childrens-Books-HO.jpg"
+        },
+        {
+            "postId": 2,
+            "id": 7,
+            "author": "C.S. Lewis",
+            "title": "The Chronicles of Narnia",
+            "subject": "Fantasy",
+            "published_date": "1950-10-16",
+            "image":"https://bookcover4u.com/pro/Children-book-cover-design-P1478594173CHB-Children--Reading-kids;-lessons-story-Children-reading.jpg"
+        },
+        {
+            "postId": 2,
+            "id": 8,
+            "author": "Margaret Atwood",
+            "title": "The Handmaid's Tale",
+            "subject": "Dystopian Fiction",
+            "published_date": "1985-09-24",
+            "image":"https://www.hamiltonstone.org/images/dwight.jpg"       
+         },
+        {
+            "postId": 2,
+            "id": 9,
+            "author": "Markus Zusak",
+            "title": "The Book Thief",
+            "subject": "Historical Fiction",
+            "published_date": "2005-03-14",
+            "image":"https://horrornews.net/wp-content/uploads/2012/10/The-Haunting-of-Whaley-House-2012-movie-3-250x330.jpg"
+        },
+        {
+            "postId": 2,
+            "id": 10,
+            "author": "Jane Austen",
+            "title": "Pride and Prejudice",
+            "subject": "Classic Literature",
+            "published_date": "1813-01-28",
+            "image": "https://acf-film.com/veloxen/houseclockinitswalls_m.jpg"
+        },
+        {
+            "postId": 2,
+            "id": 11,
+            "author": "George Orwell",
+            "title": "Nineteen Eighty-Four",
+            "subject": "Dystopian Fiction",
+            "published_date": "1949-06-08",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/51LxnVbSNnL._SX300_SY300_QL70_ML2_.jpg"
+        },
+        {
+            "postId": 2,
+            "id": 12,
+            "author": "F. Scott Fitzgerald",
+            "title": "The Great Gatsby",
+            "subject": "Classic Literature",
+            "published_date": "1925-04-10",
+            "image": "https://cdn.cinematerial.com/p/500x/eru5adr7/the-haunting-of-whaley-house-dvd-movie-cover.jpg?v=1456473058"
+        },
+        {
+            "postId": 2,
+            "id": 13,
+            "author": "Harper Lee",
+            "title": "To Kill a Mockingbird",
+            "subject": "Classic Literature",
+            "published_date": "1960-07-11",
+            "image": "https://i0.wp.com/danelsonauthor.com/wp-content/uploads/2015/08/153d7b55365c47ef0e8f2573b3e49821.jpg?ssl=1"
+        },
+        {
+            "postId": 2,
+            "id": 14,
+            "author": "Ray Bradbury",
+            "title": "Fahrenheit 451",
+            "subject": "Dystopian Fiction",
+            "published_date": "1953-10-19",
+            "image": "https://i.pinimg.com/originals/61/02/b8/6102b8388b708fcbcafc9be834e0ebd2.jpg"
+        },
+        {
+            "postId": 2,
+            "id": 15,
+            "author": "George R.R. Martin",
+            "title": "A Game of Thrones",
+            "subject": "Fantasy",
+            "published_date": "1996-08-01",
+            "image": "http://ww1.prweb.com/prfiles/2016/02/18/13223351/8226Frontcover.jpg"
+        }
+    ]
+}
