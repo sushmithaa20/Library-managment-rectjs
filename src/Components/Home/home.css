@@ -1,6 +1,6 @@
 @import url('https://unpkg.com/popper.js@2.11.6/dist/umd/popper.min.css');
 
-body{
+body {
     background-color: #1f1f38;
     color: white;
 }
@@ -12,66 +12,73 @@ body{
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
-  }
-  
-  .book-image {
+}
+
+.book-image {
     width: 150px;
     height: 150px;
     margin-right: 10px;
-  }
-  
-  .book-details {
+}
+
+.book-details {
     flex: 1;
-  }
-  
-  .book-title {
+}
+
+.book-title {
     font-size: 18px;
     font-weight: bold;
     margin-top: 0;
-  }
-  
-  .book-author,
-  .book-subject,
-  .book-published-date {
+}
+
+.book-author,
+.book-subject,
+.book-published-date {
     font-size: 14px;
     margin-bottom: 5px;
-  }
-  
-  .search-container{
+}
+
+.search-container {
 
     background-image: url('../images/ban2.jpg');
     background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
     display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40vh;
-  border-radius: 10px;
-  opacity: 0.8;
-  }
-  
-  .input{
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+h5 {
+    color: #4db5ff;
+}
+
+.input {
     width: 300px;
     height: 40px;
     border-radius: 20px 0 0 20px;
-  }
-  .search-btn{
+}
+
+.search-btn {
     width: 80px;
     height: 40px;
     border-radius: 0px 20px 20px 0px;
     background-color: #4db5ff;
     border: solid black 1px;
-  }
-  .select{
+}
+
+.select {
     border-radius: 8px;
     height: 30px;
     width: 250px;
     margin-bottom: 30px;
-  }
-  .pagination{
+}
+
+.pagination {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
